@@ -49,10 +49,9 @@ Full write-up: [`docs/final_report.pdf`](docs/final_report.pdf)
 
 ```
 .
-├── notebooks/
-│   └── train_dqn.ipynb          # DQN training and evaluation
 ├── scripts/
 │   └── train_ppo.py             # PPO training and evaluation
+│   └── train_dqn.ipy            # DQN training and evaluation
 ├── checkpoints/
 │   ├── dqn_50k/                 # DQN weights (50k timesteps)
 │   └── dqn_250k/                # DQN weights (250k timesteps)
