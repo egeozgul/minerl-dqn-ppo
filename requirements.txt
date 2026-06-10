@@ -1,0 +1,21 @@
+# Core ML / RL
+torch>=1.10.0
+stable-baselines3>=1.6.0
+gym<0.26
+
+# MineRL (install separately if needed — see README)
+minerl>=0.4.4
+
+# Observation processing
+opencv-python>=4.5.0
+numpy>=1.21.0
+matplotlib>=3.5.0
+
+# Utilities
+psutil>=5.8.0
+tqdm>=4.62.0
+imageio>=2.9.0
+
+# Notebook support (DQN)
+jupyter>=1.0.0
+ipywidgets>=7.6.0
