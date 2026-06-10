@@ -11,6 +11,20 @@ Reinforcement learning agents for collecting wood logs in Minecraft using the [M
 
 Both agents use POV (pixel) observations resized to 64×64, a reduced action space (10 discrete actions), and custom reward shaping that rewards log collection.
 
+## Architecture
+
+### DQN
+
+Experience replay with a periodically synced target network for stable Q-value learning.
+
+![DQN architecture](docs/diagrams/dqn_architecture.png)
+
+### PPO
+
+Shared CNN backbone with separate actor (policy) and critic (value) heads.
+
+![PPO architecture](docs/diagrams/ppo_architecture.png)
+
 ## Results
 
 | DQN training (50k steps) | DQN training (250k steps) | PPO evaluation |
@@ -34,6 +48,7 @@ Full write-up: [`docs/final_report.pdf`](docs/final_report.pdf)
 │   ├── figures/                 # Training / evaluation plots
 │   └── ppo/                     # PPO training logs
 ├── docs/
+│   ├── diagrams/                # Model architecture diagrams
 │   ├── final_report.pdf
 │   └── project_proposal.pdf
 ├── requirements.txt
