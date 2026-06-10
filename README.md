@@ -27,9 +27,17 @@ Shared CNN backbone with separate actor (policy) and critic (value) heads.
 
 ## Results
 
-| DQN training (50k steps) | DQN training (250k steps) | PPO evaluation |
-|---|---|---|
-| ![DQN 50k](results/figures/training_metrics_50k.png) | ![DQN 250k](results/figures/training_metrics_250k.png) | ![PPO eval](results/figures/evaluation_metrics_50k.png) |
+### DQN Training Rewards
+
+Episode reward and 10-episode moving average over 119 training episodes. The agent starts with near-zero rewards during exploration, then shows a clear learning signal after ~60 episodes as log-collection behavior emerges. Final moving average reaches ~0.08, with peak episode rewards up to ~0.16.
+
+![DQN training reward plot](results/figures/DQN_training_reward_plot.png)
+
+### PPO Training Rewards
+
+Smoothed reward curve over ~85,000 training steps. Performance stays flat through early exploration (~55k steps), then improves steadily as the policy converges — reaching a smoothed reward of ~0.25 by the end of training.
+
+![PPO training reward plot](results/figures/PPO_training_reward_plot.png)
 
 Full write-up: [`docs/final_report.pdf`](docs/final_report.pdf)
 
